@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { VideoPlayerModal } from '../VideoPlayerModal';
 import axios from 'axios';
+import Header from '../header';
 
 
 export default function ShowInfo() {
@@ -37,7 +38,8 @@ export default function ShowInfo() {
 
 
   return (
-    <>
+    <div>
+        <Header />
       <Container>
         <div className="wrapper my-4">
           <div className="showinfo-div">
@@ -100,6 +102,6 @@ export default function ShowInfo() {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-    </>
+    </div>
   );
 }
